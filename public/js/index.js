@@ -51,5 +51,6 @@ $(document).on("click", "#savenote", function() {
       });
   
     $("#bodyinput").val("");
+    location.reload();
   });
   
