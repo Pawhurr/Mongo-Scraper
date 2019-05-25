@@ -4,14 +4,28 @@ $(".scrape").on("click", function(event) {
         url: "/scrape",
         method: "GET"
     }).then(function(res) {
-        alert(res);
+        alert("Scrape complete!");
+        console.log(res);
     }).catch(function(err) {
         console.log(err);
     });
 });
 
+$(".home").on("click", function(event) {
+  event.preventDefault();
+  $.ajax({
+      url: "/",
+      method: "GET"
+  }).then(function(res) {
+      console.log(res);
+  }).catch(function(err) {
+      console.log(err);
+  });
+});
+
 $(".seeArts").on("click", function(event) {
     event.preventDefault();
+    alert("hi");
     $.ajax({
         url: "/articles",
         method: "GET"

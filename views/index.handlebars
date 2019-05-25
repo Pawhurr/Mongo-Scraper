@@ -1,11 +1,41 @@
 <body>
 
-<h1>Hello World!</h1>
+    <div class="container-fluid">
+        <div class="row mb-5">
+            <div class="col-12">
+                <h1 style="font-size: 20vh">Dish Scraper</h1>
 
-<button class="scrape">Scrape</button>
-<a href="/articles"><button class="seeArts">See Articles</button></a>
+                <button class="scrape">Scrape</button>
+                {{!-- <button class="seeArts">See Articles</button> --}}
+                <button onclick="window.location.href='/articles'">See Articles</button>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="js/index.js"></script>
+            </div>
+        </div>
+        <div class="row">
+            <div class="jumbotron">
+                <h2>Welcome to Dish Scraper!</h2>
+                <h2>To get started, click the "Scrape" button to pull the latest food related articles. Then, click the
+                    "See Articles" button to
+                    have them displayed. Click on any of the links to view the full article and write any notes you'd
+                    like to keep about them
+                    in the "Save Note" box. Bon appetite!
+                </h2>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="footer border-top 1px solid" style="position: absolute; bottom: 0; width: 100%">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1>Dish Scraper</h1>
+                <button onclick="window.location.href='/'">Go Home</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
 
 </body>

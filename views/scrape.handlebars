@@ -1,23 +1,47 @@
 <body>
 
-<h1>Another World!</h1>
+    <div class="container-fluid">
+        <div class="row mb-5">
+            <div class="col-12">
+                <h1 style="font-size: 10vh">Dish Scraper</h1>
 
-<button class="home">Go home</button>
+                <button onclick="window.location.href='/'">Go Home</button>
+            </div>
 
-{{#each arts}}
-    <div data-ID="{{_id}}">
-    <p>{{headline}}</p>
-    <p>{{summary}}</p>
-    <p>{{articleUrl}}</p>
-    <textarea id="bodyinput" name="body"></textarea>
-    <button data-id="{{_id}}" id="savenote">Save note</button>
-    <p>{{note}}</p>
+        </div>
+
+        {{#each arts}}
+        <div class="row">
+            <div class="col-6">
+                <div data-ID="{{_id}}">
+                    <h2>{{headline}}</h2>
+                    <p> {{summary}}</p>
+                    <a href="https:{{articleUrl}}"> https:{{articleUrl}}</a>
+                    <br><br>
+                    <p>{{note}}</p>
+                </div>
+                <div class="col-3">
+                    <textarea id="bodyinput" name="body"></textarea>
+                    <button data-id="{{_id}}" id="savenote">Save note</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        {{/each}}
+
+
     </div>
-    <br>
-{{/each}}
 
+        <div class="footer border-top 1px solid">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>Dish Scraper</h1>
+                    <button onclick="window.location.href='/'">Go Home</button>
+                </div>
+            </div>
+        </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/index.js"></script>
 
 </body>

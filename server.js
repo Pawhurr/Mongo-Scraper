@@ -43,8 +43,8 @@ app.get("/scrape", function (req, res) {
                 articleUrl: link
             }
             db.Article.create(data)
+            res.json(data);
         });
-        res.send("scrape complete");
     });
        
 });
